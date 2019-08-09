@@ -1,0 +1,21 @@
+alias ll='ls -l'
+alias la='ls -a'
+alias grep="grep --color=auto"
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+
+alias c='clear'
+
+alias now='date +"%Y-%m-%d %H:%M:%S"'
+alias nowts='date +"%s"'
+alias nowstr='date +"%Y%m%d%H%M%S"'
+
+alias ts2dt='timestamp_to_date(){ date -d @"$1" +"%Y-%m-%d %H:%M:%S" }; timestamp_to_date'
+alias dbr='deploy_branch(){ git co test; git pull origin test; git merge $1; git push origin test; git-tag-ci test "deploy stg" }; deploy_branch'
+
+alias jsonfmt='python -m json.tool'
+
+alias gpull='git_pull_origin(){ git pull origin $1 }; git_pull_origin'
+alias gpush='git_push_origin(){ git push origin $1 }; git_push_origin'
+alias gmf='git_merge_feature(){ git merge feature/$1 }; git_merge_feature'

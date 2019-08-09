@@ -1,0 +1,39 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name =
+	email =
+[push]
+	default = matching
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit -s
+	st = status
+    lg = log --stat
+[filter "tabspace"]
+	clean = gexpand --tabs=4 --initial
+	smudge = gunexpand --tabs=4 --first-only
+[core]
+	autocrlf = input
+#	excludesfile = 
+	editor = vim
+[pager]
+	status = false
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = No
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	trustExitCode = true
+[gui]
+	recentrepo = 

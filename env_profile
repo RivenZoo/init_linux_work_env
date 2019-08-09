@@ -1,0 +1,9 @@
+cowsay "$(whoami), welcome!"
+
+export GOROOT=/home/go
+export GOPATH=/home/workspace/gopath
+
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:/home/sbin
+
+export JAVA_HOME=/etc/alternatives/java_sdk 
