@@ -19,3 +19,5 @@ alias jsonfmt='python -m json.tool'
 alias gpull='git_pull_origin(){ git pull origin $1 }; git_pull_origin'
 alias gpush='git_push_origin(){ git push origin $1 }; git_push_origin'
 alias gmf='git_merge_feature(){ git merge feature/$1 }; git_merge_feature'
+
+alias gtag='git_tag() { t=$(date +"test-%Y%m%d-%H%M"); git pull origin test; git tag -m "test tag" -a ${t}; git push origin ${t} }; git_tag'
